@@ -1,27 +1,28 @@
-import React,{Component} from 'react';
+import React, {Component}  from 'react';
 import  ReactDOM  from 'react-dom';
-const tasks=['sumit is good boy','you are creative','this is good for health'];
+
 
 
 class List extends Component{
   render(){
     return(<ol>
-      {tasks.map((task,index)=><li key={index}>{task}</li>)}
+      {this.props.tasks.map((task,index)=><li key={index}>{task}</li>)}
       </ol>)
   }
 }
 
 class Title extends Component{
   render(){
-    return (<h1>Title list</h1>)
+    return (<h1>{this.props.title}</h1>)
   }
 }
 
 class Main extends Component{
   render(){
     return(
-      <div><Title/>
-             <List/>
+      <div><Title title={'toDo'}/>
+      <List tasks={['Aniket is my guru ji','He is good empo in mindtree']}/>
+            
              </div>
     )
   }
