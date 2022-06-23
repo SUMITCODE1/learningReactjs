@@ -30,11 +30,20 @@ class Main extends Component{
     }
     ]
   }
+  this.removePhoto=this.removePhoto.bind(this);
   }
+    removePhoto(postRemoved){
+      console.log(postRemoved.discription);
+      this.setState((state)=>({
+        posts:state.posts.filter(post=>post!==postRemoved)
+      })
+      )
+
+    }
     render(){
       return(
         <div><Title title={'Photowall'}/>
-       <PhotoWall posts={this.state.posts}/>
+       <PhotoWall posts={this.state.posts} onRemovePhoto={this.removePhoto}/>
               
                </div>
       )
