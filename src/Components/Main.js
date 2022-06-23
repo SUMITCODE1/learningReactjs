@@ -2,6 +2,7 @@ import React ,{Component} from "react";
 
 import Title from './Title';
 import PhotoWall from "./PhotoWall";
+import { Simulate } from "react-dom/test-utils";
 
 
 
@@ -12,23 +13,7 @@ class Main extends Component{
   constructor(){
     super();
     this.state ={
-      posts:[{
-      id:"0",
-      discription:"beautyful landscape",
-      imageLink:"Image/image1.jpg"
-    
-    },{
-      id:"1",
-      discription:"Alien ??",
-      imageLink:"Image/image2.jpg"
-    
-    },
-    {
-      id:"2",
-      discription:"On a vaction",
-      imageLink:"Image/image3.jpg"
-    }
-    ]
+      posts:[]
   }
   this.removePhoto=this.removePhoto.bind(this);
   }
@@ -40,6 +25,13 @@ class Main extends Component{
       )
 
     }
+    componentDidMount(){
+      const data=SimulateFetchFromDatabase();
+      this.setState({
+        posts:data
+      })
+    
+    }
     render(){
       return(
         <div><Title title={'Photowall'}/>
@@ -48,5 +40,23 @@ class Main extends Component{
                </div>
       )
     }
+  }
+  function SimulateFetchFromDatabase(){
+    return [{
+      id:"0",
+      discription:"Cat",
+      imageLink:"Image/image1.jpg"
+    
+    },{
+      id:"1",
+      discription:"Laptop with notebook",
+      imageLink:"Image/image2.jpg"
+    
+    },
+    {
+      id:"2",
+      discription:"Laptop",
+      imageLink:"Image/image3.jpg"
+    }]
   }
   export default Main;
