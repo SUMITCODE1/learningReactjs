@@ -4,9 +4,4 @@ import Main from './Components/Main';
 import './Styles/stylesheet.css';
 
 
-
-
-
-
-
 ReactDOM.render(<Main/>,document.getElementById('root'));
