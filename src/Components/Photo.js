@@ -1,8 +1,7 @@
-import React,{Component} from "react";
+import React from "react";
 
-class Photo extends Component{
-    render(){
-        const post=this.props.post;
+function Photo(props){
+        const post=props.post;
         return <figure class="figure"> 
             <img className="photo" src={post.imageLink} alt={post.discription}/>
             <figcaption><p>{post.discription}</p></figcaption> 
@@ -12,5 +11,5 @@ class Photo extends Component{
                         </figure>
                        
     }
-}
+
 export default Photo;
