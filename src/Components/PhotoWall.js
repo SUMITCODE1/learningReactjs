@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 function PhotoWall(props){
     return<div>
-        <Link className="addIcon" onClick={props.onNavigate} to="/AddPhoto"></Link>
+        <Link className="addIcon" to="/AddPhoto"></Link>
         {/*button onClick={props.onNavigate} className="addIcon"></button>*/}
         <div className="photo-grid">
             {props.posts.map((post,index)=><Photo key={index} post={post} onRemovePhoto={props.onRemovePhoto}/>)}

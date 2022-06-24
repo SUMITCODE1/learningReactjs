@@ -4,6 +4,7 @@ import Title from './Title';
 import PhotoWall from "./PhotoWall";
 import { Simulate } from "react-dom/test-utils";
 import AddPhoto from "./AddPhoto";
+import {Route} from "react-router-dom";
 
 
 
@@ -58,22 +59,21 @@ class Main extends Component{
     render(){
       return(
         <div>
-          {
-            this.state.screen==='photos' &&(
-          <div>
+        <Route exact path="/" render={()=>(
+          <div> 
           <Title title={'Photowall'}/>
           <PhotoWall posts={this.state.posts} onRemovePhoto={this.removePhoto} onNavigate={this.navigate}/>
           </div>
-            )
-    }
-    {
-        this.state.screen ==='addPhoto' &&(
+         ) }/>
+            
+   <Route path="/AddPhoto" render={()=>(
         <div>
             <AddPhoto/>
-        </div>  
-        )
+        </div> 
+   )}/> 
+        
       
-    }
+    
                </div>
       )
     }
