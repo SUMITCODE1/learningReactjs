@@ -1,8 +1,21 @@
 import React,{Component} from "react";
 
-class AddPhoto extends Component{
-    render(){
-        return <h1>this is page where add your photo</h1>
-    }
+function AddPhoto(){
+    return (
+        <div>
+            <h1>PhotoWall</h1>
+            <div className="form">
+                <form>
+                    <input type="text" placeholder="Link"/>
+                    <input type="text" placeholder="description"/>
+                    <button>Post</button>
+                </form>
+            </div>
+
+
+        </div>
+    )
 }
+    
+
 export default AddPhoto;

@@ -39,7 +39,7 @@ h1{
     justify-content: center;
 
 }
-.remove-button{
+button{
     flex-basis: 48%;
     color: red;
     font-size: 15px;
@@ -56,4 +56,39 @@ h1{
     border: none;
     background-size: contain;
     ;
+}
+.form{
+    background: wheat;
+    max-width: 360px;
+    padding: 45px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.form input{
+    font-family: sans-serif;
+    background: #f2f2f2;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0 0 15px;
+}
+.form button{
+   width: 100%; 
+   background: #3e0fe6;
+   text-transform: uppercase;
+   color: white;
+   padding: 15px;
+   font-size: 14px;
+   font-family: sans-serif;
+   border: none;
+
+}
+.form button:hover{
+   background-color:grey ;
+}
+button:hover{
+    border-color: blue;
 }

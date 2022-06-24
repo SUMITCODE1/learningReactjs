@@ -35,7 +35,7 @@ class Main extends Component{
       screen:'photos'
   }
   this.removePhoto=this.removePhoto.bind(this);
-  this.navigate=this.navigate.bind(this);
+
   }
     removePhoto(postRemoved){
       console.log(postRemoved.discription);
@@ -46,11 +46,7 @@ class Main extends Component{
 
 
     }
-    navigate(){
-      this.setState({
-        screen:'addPhoto'
-      })
-    }
+    
     componentDidUpdate(prevProps,prevState){
       console.log(prevState.posts);
       console.log(this.state);
