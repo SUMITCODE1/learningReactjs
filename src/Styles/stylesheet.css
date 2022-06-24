@@ -48,3 +48,12 @@ h1{
     padding: 5px;
 
 }
+.addIcon{
+    margin: 20px auto;
+    display: table;
+    padding: 40px;
+    background: url(https://cdn-icons-png.flaticon.com/512/1828/1828919.png);
+    border: none;
+    background-size: contain;
+    ;
+}
