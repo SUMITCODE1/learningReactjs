@@ -46,6 +46,11 @@ class Main extends Component{
 
 
     }
+    addPhoto(postSubmitted){
+      this.setState(state=>({
+        post:state.post.concat([postSubmitted])
+      }));
+    }
     
     componentDidUpdate(prevProps,prevState){
       console.log(prevState.posts);
@@ -62,11 +67,14 @@ class Main extends Component{
           </div>
          ) }/>
             
-   <Route path="/AddPhoto" render={()=>(
-        <div>
-            <AddPhoto/>
-        </div> 
-   )}/> 
+   <Route path="/AddPhoto" render={({history})=>
+  <div> <AddPhoto onAddphoto={(addedPost)=>{
+    console.log(addedPost);
+    this.addPhoto(addedPost);
+    history.push('/');
+
+
+  }}/></div>} /> 
         
       
     
